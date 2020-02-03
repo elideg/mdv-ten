@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center align-content-center mt-5" *ngIf="_project | async as project">
+  <button mat-button [routerLink]="['/projects']">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <div class="col-2">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          <h1>
+            {{ originalTitle }}
+          </h1>
+        </mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h3 mat-line>Project Title</h3><p mat-line>{{ project.title }}</p>
+        <h3 mat-line>Project Details</h3><p mat-line>{{ project.details }}</p>
+        <h3 mat-line>Project Approved</h3><p mat-line>{{ project.approved }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

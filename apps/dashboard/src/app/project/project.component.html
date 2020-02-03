@@ -1,0 +1,16 @@
+<div class="container d-flex mt-3">
+  <div class="col-6">
+    <mdv-ten-project-list [projects]="projects$ | async"
+                          (selected)="selectProject($event)"
+                          (deleted)="deleteProject($event)">
+    </mdv-ten-project-list>
+  </div>
+
+  <div class="col-6">
+    <mdv-ten-project-details [project]="selectedProject"
+                              [form]="form"
+                              (saved)="saveProject($event)"
+                              (cancelled)="cancel()">
+    </mdv-ten-project-details>
+  </div>
+</div>
