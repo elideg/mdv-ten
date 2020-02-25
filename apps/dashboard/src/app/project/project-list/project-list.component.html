@@ -6,7 +6,7 @@
     </mat-card-header>
     <mat-card-content>
       <mat-list>
-        <mat-list-item *ngFor="let project of projects" class="mat-list-option border-bottom" [routerLink]="[project.id]">
+        <mat-list-item *ngFor="let project of projects; let last = last" class="mat-list-option border-bottom" [ngClass]="{'no-bottom-border': last}" [routerLink]="[project.id]">
           <h3 mat-line>
             {{project.title}}
           </h3>

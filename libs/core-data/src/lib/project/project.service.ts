@@ -2,7 +2,7 @@ import { Project } from './project';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 
-const BASE_URL = 'https://mdv-db.herokuapp.com'
+const BASE_URL = 'https://db-30x30.herokuapp.com'
 
 @Injectable({
   providedIn: 'root'
